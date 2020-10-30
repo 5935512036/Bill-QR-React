@@ -48,7 +48,7 @@ function App() {
           list.map((item, index) => (
             <div className='grid-item' key={index}>
               <h3>{item.room}: {item.amount} Baht</h3>
-              <img src={item.qr}/>
+              <img alt='qr' src={item.qr}/>
             </div>
           ))
         }
