@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import * as qrcode from 'qrcode'
 import * as generatePayload from 'promptpay-qr'
 import ReadCSV from './components/ReadCSV';
+import MySCV from './generaterqrcode.csv';
+import './index.css';
 
 const MOBILE_NUMBER = '098-679-7379';
 
@@ -53,7 +55,11 @@ function App() {
           ))
         }
       </div>
+    
       { list.length === 0 && <ReadCSV onChange={handleReadCSV}/>}
+      <br/>
+      { list.length === 0 && <a className="dow" href={MySCV} download="generaterqrcode.csv">ดาวน์โหลดฟอร์ม</a> }
+     
     </div>
   );
 }
